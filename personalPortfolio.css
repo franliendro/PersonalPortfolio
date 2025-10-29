@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Header */
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+    align-items: center;
+}
+.header__name{
+    
+    font-size: 1.2rem;
+}
+.header__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+.header-nav__ul {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    
+}
+.header-nav__ul li{
+    list-style: none;
+}
+.header-nav__ul a{
+    color: black;
+    text-decoration: none;
+}
+/* Presentation */
+.presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.presentation__title{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.presentation__subtitle{
+    font-size: 1rem;
+    text-align: center;
+    color: #686868;
+}
+/* Main Content */
+.main{
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    flex-grow: 1;
+}
+.main-section h2{
+    padding: 1rem 0;
+}
+/* Main Sections */
+.main-section{
+    outline: auto;
+}
+/* Projects */
+.projects-list, .experience article{
+    background-color: rgb(230, 231, 207);
+}
+.projects-list li{
+    outline: auto;
+    padding: 0.5rem 0;
+}
+/* Work Experience */
+.experience article{
+    outline: auto;
+    padding: 1rem;
+    padding-left: 2rem;
+    text-align: left;
+}
+.experience a{
+    text-decoration: none;
+    color: #185bd8;
+}
+.experience h3{
+    margin-bottom: 0.5rem;
+}
+/* Education */
+.education{
+    text-align: left;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+.education h2{
+    text-align: center;
+}
+.education ul{
+    list-style-type: none;
+}
+.education li::before {
+  content: "- "; 
+  margin-left: 1rem;
+}
+/* Reviews */
+.reviews-article{
+    outline: auto;
+    padding: 1rem 2rem;
+    border-radius: 40px;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+.reviews-article .article-review{
+    color: rgb(0, 0, 0);
+    margin-bottom: 1rem;
+}
+.reviews-article .article-author{
+    color: rgb(156, 156, 156);
+}
+#reviews{
+    outline: 0;
+}
+.contenedorReviews{
+    flex-grow: 1;
+    align-items: center;
+}
+/* Footer */
+.footer{
+    text-align: center;
+    padding: 1rem 0;
+}
+/* Responsive Design */
+@media (min-width: 600px) {
+    /* Header */
+    .header,.header__info{
+        flex-direction: row;
+    }
+    .presentation{
+        height: 30vh;
+    }
+    .presentation__title{
+        font-size: 4rem;
+    }
+    .presentation__subtitle{
+        font-size: 1.2rem;
+    }
+    /* Main Content */
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "projects experience education"
+            "reviews reviews reviews";
+    }
+    /* Projects */
+    .projects{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        grid-area: projects; 
+    }
+    .projects-list{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .projects-list li{
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Reviews */
+    
+    .article-container{
+        display: flex;
+    }
+    .contenedorReviews{
+        display: flex;
+        justify-content: center;
+    }
+    .projects-list, .experience article{
+        background-color: rgb(255, 255, 255);
+    }
+    .article-container{
+        gap: 2rem;
+        margin: 0 2rem;
+    }
+    .experience{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        grid-area: experience;
+    }
+    .experience article{
+        flex-grow: 1;
+    }
+    .education{
+        grid-area: education;
+    }
+    .reviews { grid-area: reviews; }
+}
