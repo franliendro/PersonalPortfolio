@@ -1,5 +1,4 @@
 # PersonalPortfolio
-NOT FINISHED YET
 3rd project of Beginner Path from roadmap.sh
 Here is the link of the challenge that I finished:
 https://roadmap.sh/projects/portfolio-website
